@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
-import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
-import { Link, useHistory } from 'react-router-dom';
+import {
+  Avatar,
+  Button,
+  CssBaseline,
+  TextField,
+  FormControlLabel,
+  Checkbox,
+  Grid,
+  Box,
+  Typography,
+  Container,
+} from '@material-ui/core';
+import { useHistory } from 'react-router-dom';
 import { useDispatch, connect } from 'react-redux';
-import { Copyright, Loading } from 'shared/components';
+import { Copyright, Loading, Link } from 'shared/components';
 import useStyles from './styles';
 import { State } from 'state';
 import { LoginAction, UserState } from 'state/user';
@@ -96,10 +98,14 @@ const Login: React.FC<LoginProps> = ({ userState }) => {
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link to="#">Forgot password?</Link>
+                <Link to="#" variant="body2">
+                  Forgot password?
+                </Link>
               </Grid>
               <Grid item>
-                <Link to="/signup">{"Don't have an account? Sign Up"}</Link>
+                <Link to="/signup" variant="body2">
+                  {"Don't have an account? Sign Up"}
+                </Link>
               </Grid>
             </Grid>
           </form>

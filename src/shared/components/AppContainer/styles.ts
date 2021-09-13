@@ -1,10 +1,10 @@
-import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
+import { makeStyles, createStyles } from '@material-ui/core/styles';
 
-export default makeStyles((theme: Theme) =>
+export default makeStyles(() =>
   createStyles({
     root: {
-      display: 'flex',
-      padding: theme.spacing(1),
+      top: 'auto',
+      bottom: 0,
     },
   }),
 );
