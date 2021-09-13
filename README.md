@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Photos application, which is alternative for Instagram
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
