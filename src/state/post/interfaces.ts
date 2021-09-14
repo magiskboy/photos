@@ -24,12 +24,15 @@ export interface PostImageItem {
 }
 
 export interface PostItem {
+  id: string;
+  createdAt: Date;
   author: PostAuthor;
   images: PostImageItem[];
   comments: PostCommentItem[];
   likes: PostLikeItem[];
   totalLikes: number;
   totalComments: number;
+  content?: string;
 }
 
 export interface PostState {

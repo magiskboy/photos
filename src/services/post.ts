@@ -26,12 +26,15 @@ export interface PostImageItem {
 }
 
 export interface PostItem {
+  id: string;
   author: PostAuthor;
   images: PostImageItem[];
   comments: PostCommentItem[];
   likes: PostLikeItem[];
   totalLikes: number;
   totalComments: number;
+  createdAt: Date;
+  content?: string;
 }
 
 export const fetchPostsForNewFeed = async (): Promise<PostItem[]> => {
