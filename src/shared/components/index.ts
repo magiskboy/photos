@@ -5,3 +5,4 @@ export { default as DesktopNavigator } from './DesktopNavigator/DesktopNavigator
 export { default as MobileNavigator } from './MobileNavigator/MobileNavigator';
 export { default as AppContainer } from './AppContainer/AppContainer';
 export { default as PostItem } from './PostItem/PostItem';
+export { default as LikeButton } from './LikeButton/LikeButon';

@@ -22,6 +22,7 @@ const AppContainer: React.FC<AppContainerProps> = ({ children, currentUser }) =>
       <Container maxWidth="md" disableGutters={mobileDevice}>
         <>{children}</>
       </Container>
+      {mobileDevice && <div className={classes.container}></div>}
     </>
   );
 };

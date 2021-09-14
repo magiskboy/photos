@@ -11,19 +11,8 @@ export const mockFetchPostsForNewFeed = (): PostItem[] => {
         profileUrl:
           'https://lh3.googleusercontent.com/a-/AOh14GiOiLUW-E3sVAQsj46HsH1l9AevQsiztJrD6UP9vg=s288-p-rw-no',
       },
-      comments: [
-        { userComment: { id: '002', username: 'tramytrang.1' }, time: new Date(), content: 'Lmao' },
-        { userComment: { id: '002', username: 'tramytrang.1' }, time: new Date(), content: 'Lmao' },
-        { userComment: { id: '002', username: 'tramytrang.1' }, time: new Date(), content: 'Lmao' },
-        { userComment: { id: '002', username: 'tramytrang.1' }, time: new Date(), content: 'Lmao' },
-        { userComment: { id: '002', username: 'tramytrang.1' }, time: new Date(), content: 'Lmao' },
-      ],
-      likes: [
-        { userLiked: { id: '002', username: 'tramytrang.1' } },
-        { userLiked: { id: '002', username: 'tramytrang.1' } },
-        { userLiked: { id: '002', username: 'tramytrang.1' } },
-        { userLiked: { id: '002', username: 'tramytrang.1' } },
-      ],
+      comments: [],
+      likes: [],
       images: [
         { src: 'https://genk.mediacdn.vn/2017/1-1504600589828.jpg' },
         {
@@ -36,7 +25,7 @@ export const mockFetchPostsForNewFeed = (): PostItem[] => {
         'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
     },
     {
-      id: '1',
+      id: '2',
       createdAt: new Date(),
       author: {
         id: '002',
@@ -44,19 +33,8 @@ export const mockFetchPostsForNewFeed = (): PostItem[] => {
         profileUrl:
           'https://lh3.googleusercontent.com/a-/AOh14GjzdaUpGmj2IKciv7ptDWp9YWZyJ5haJIDyqlNk=s317-p-rw-no',
       },
-      comments: [
-        { userComment: { id: '002', username: 'tramytrang.1' }, time: new Date(), content: 'Lmao' },
-        { userComment: { id: '002', username: 'tramytrang.1' }, time: new Date(), content: 'Lmao' },
-        { userComment: { id: '002', username: 'tramytrang.1' }, time: new Date(), content: 'Lmao' },
-        { userComment: { id: '002', username: 'tramytrang.1' }, time: new Date(), content: 'Lmao' },
-        { userComment: { id: '002', username: 'tramytrang.1' }, time: new Date(), content: 'Lmao' },
-      ],
-      likes: [
-        { userLiked: { id: '002', username: 'tramytrang.1' } },
-        { userLiked: { id: '002', username: 'tramytrang.1' } },
-        { userLiked: { id: '002', username: 'tramytrang.1' } },
-        { userLiked: { id: '002', username: 'tramytrang.1' } },
-      ],
+      comments: [],
+      likes: [],
       images: [
         { src: 'https://genk.mediacdn.vn/2017/1-1504600589828.jpg' },
         {
@@ -65,6 +43,8 @@ export const mockFetchPostsForNewFeed = (): PostItem[] => {
       ],
       totalLikes: 21,
       totalComments: 23,
+      content:
+        'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
     },
   ];
 };

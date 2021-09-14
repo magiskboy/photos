@@ -1,11 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { connect } from 'react-redux';
 import { State } from 'state';
-import { PostItem as PostItemModel } from 'state/post';
+import { PostItem as PostItemModel, FetchPostAction, SetLikedPostAction } from 'state/post';
 import { CurrentUser } from 'state/user';
-import { FetchPostAction } from 'state/post';
 import { AppContainer, PostItem } from 'shared/components';
 
 interface HomeProps {
@@ -16,7 +15,7 @@ interface HomeProps {
 const Home: React.FC<HomeProps> = ({ posts, currentUser }) => {
   const dispatch = useDispatch();
   const browserHistory = useHistory();
-  useEffect(() => {
+  React.useEffect(() => {
     !currentUser && browserHistory.push('/login');
     if (currentUser) {
       dispatch(FetchPostAction());
@@ -25,10 +24,19 @@ const Home: React.FC<HomeProps> = ({ posts, currentUser }) => {
     }
   }, [currentUser, browserHistory, dispatch]);
 
+  const handleLikePostItemClick = React.useCallback(
+    (post: PostItemModel) => {
+      return () => {
+        dispatch(SetLikedPostAction(currentUser as CurrentUser, post));
+      };
+    },
+    [currentUser, dispatch],
+  );
+
   return currentUser ? (
     <AppContainer currentUser={currentUser}>
       {posts.map((item, idx) => (
-        <PostItem key={idx} data={item} />
+        <PostItem key={idx} data={item} onLikeClicked={handleLikePostItemClick(item)} />
       ))}
     </AppContainer>
   ) : null;
