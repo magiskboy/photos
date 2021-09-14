@@ -5,6 +5,7 @@ import {
   Home as HomeIcon,
   Notifications as NotificationsIcon,
   Settings as SettingsIcon,
+  Add as AddIcon,
 } from '@material-ui/icons';
 
 const MobileNavigator: React.FC = () => {
@@ -14,17 +15,17 @@ const MobileNavigator: React.FC = () => {
   };
   return (
     <BottomNavigation onChange={handleChange} value={browserHistory.location.pathname}>
-      <BottomNavigationAction value="/" icon={<HomeIcon />} showLabel={false} />
+      <BottomNavigationAction value="/" icon={<HomeIcon />} />
+      <BottomNavigationAction value="/addPost" icon={<AddIcon />} />
       <BottomNavigationAction
         value="/notification"
-        showLabel={false}
         icon={
           <Badge badgeContent={3} color="primary">
             <NotificationsIcon />
           </Badge>
         }
       />
-      <BottomNavigationAction showLabel={false} value="/account" icon={<SettingsIcon />} />
+      <BottomNavigationAction value="/account" icon={<SettingsIcon />} />
     </BottomNavigation>
   );
 };

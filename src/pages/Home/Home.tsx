@@ -33,6 +33,10 @@ const Home: React.FC<HomeProps> = ({ posts, currentUser }) => {
     [currentUser, dispatch],
   );
 
+  const handleCommentPostItem = React.useCallback((value: string) => {
+    console.log(value);
+  }, []);
+
   return currentUser ? (
     <AppContainer currentUser={currentUser}>
       {posts.map((item, idx) => (
@@ -41,6 +45,7 @@ const Home: React.FC<HomeProps> = ({ posts, currentUser }) => {
           data={item}
           currentUser={currentUser}
           onLikeClicked={handleLikePostItemClick(item)}
+          onComment={handleCommentPostItem}
         />
       ))}
     </AppContainer>

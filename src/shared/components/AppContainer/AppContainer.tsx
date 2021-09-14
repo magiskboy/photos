@@ -18,7 +18,7 @@ const AppContainer: React.FC<AppContainerProps> = ({ children, currentUser }) =>
       <AppBar position={mobileDevice ? 'fixed' : 'static'} className={classes.root}>
         {mobileDevice ? <MobileNavigator /> : <DesktopNavigator currentUser={currentUser} />}
       </AppBar>
-      <Container maxWidth="md" disableGutters={mobileDevice}>
+      <Container maxWidth="sm" disableGutters={mobileDevice}>
         <>{children}</>
       </Container>
       {mobileDevice && <div className={classes.container}></div>}

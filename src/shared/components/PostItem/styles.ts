@@ -17,6 +17,10 @@ const useStyles = makeStyles((theme: Theme) =>
     avatar: {
       backgroundColor: red[500],
     },
+    comment: {
+      flex: 1,
+      marginLeft: theme.spacing(2),
+    },
   }),
 );
 

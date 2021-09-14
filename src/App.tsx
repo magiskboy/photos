@@ -31,7 +31,7 @@ const App: React.FC = () => {
   return (
     <StoreProvider store={store}>
       <ThemeProvider theme={theme}>
-        <Suspense fallback={<Loading loading />}>
+        <Suspense fallback={'Loading'}>
           <BrowserRouter>
             <Switch>
               {routes.map(({ component, path, exact }) => (
