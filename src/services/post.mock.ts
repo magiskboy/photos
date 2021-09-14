@@ -19,7 +19,7 @@ export const mockFetchPostsForNewFeed = (): PostItem[] => {
           src: 'https://gamek.mediacdn.vn/133514250583805952/2021/2/4/ds4-16124293172251883710034.png',
         },
       ],
-      totalLikes: 21,
+      totalLikes: 190517,
       totalComments: 23,
       content:
         'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
@@ -36,12 +36,11 @@ export const mockFetchPostsForNewFeed = (): PostItem[] => {
       comments: [],
       likes: [],
       images: [
-        { src: 'https://genk.mediacdn.vn/2017/1-1504600589828.jpg' },
         {
           src: 'https://gamek.mediacdn.vn/133514250583805952/2021/2/4/ds4-16124293172251883710034.png',
         },
       ],
-      totalLikes: 21,
+      totalLikes: 4202,
       totalComments: 23,
       content:
         'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BottomNavigation, BottomNavigationAction } from '@material-ui/core';
+import { BottomNavigation, BottomNavigationAction, Badge } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
 import {
   Home as HomeIcon,
@@ -14,13 +14,17 @@ const MobileNavigator: React.FC = () => {
   };
   return (
     <BottomNavigation onChange={handleChange} value={browserHistory.location.pathname}>
-      <BottomNavigationAction label="Home" value="/" icon={<HomeIcon />} />
+      <BottomNavigationAction value="/" icon={<HomeIcon />} showLabel={false} />
       <BottomNavigationAction
-        label="Notification"
         value="/notification"
-        icon={<NotificationsIcon />}
+        showLabel={false}
+        icon={
+          <Badge badgeContent={3} color="primary">
+            <NotificationsIcon />
+          </Badge>
+        }
       />
-      <BottomNavigationAction label="Account" value="/account" icon={<SettingsIcon />} />
+      <BottomNavigationAction showLabel={false} value="/account" icon={<SettingsIcon />} />
     </BottomNavigation>
   );
 };

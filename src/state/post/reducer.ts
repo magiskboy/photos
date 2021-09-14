@@ -31,11 +31,13 @@ const doSetLikedPost = (
       if (isLiked) {
         return {
           ...item,
+          totalLikes: item.totalLikes - 1,
           likes: item.likes.filter((el) => el.userLiked.id != user.id),
         };
       }
       return {
         ...item,
+        totalLikes: item.totalLikes + 1,
         likes: [...item.likes, { userLiked: { id: user.id, username: user.username } }],
       };
     }

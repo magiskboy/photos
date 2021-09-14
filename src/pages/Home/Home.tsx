@@ -36,7 +36,12 @@ const Home: React.FC<HomeProps> = ({ posts, currentUser }) => {
   return currentUser ? (
     <AppContainer currentUser={currentUser}>
       {posts.map((item, idx) => (
-        <PostItem key={idx} data={item} onLikeClicked={handleLikePostItemClick(item)} />
+        <PostItem
+          key={idx}
+          data={item}
+          currentUser={currentUser}
+          onLikeClicked={handleLikePostItemClick(item)}
+        />
       ))}
     </AppContainer>
   ) : null;
